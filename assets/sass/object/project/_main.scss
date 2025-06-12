@@ -1,0 +1,34 @@
+@use "../../foundation/mixin" as m;
+
+.l-header {
+  background-color: white;
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+  h1 {
+    margin: 0;
+  }
+
+}
+
+.l-header__logo {
+  img {
+    width: 183px;
+    height: 24px;
+  }
+}
+
+.l-header__nav {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  a {
+    font-size: 12px;
+    margin-right: 12px;
+  }
+}

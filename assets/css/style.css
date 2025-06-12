@@ -7,6 +7,41 @@
 /*--------------------------------------*
     * project
 *--------------------------------------*/
-body {
-  color: #000;
+.l-header {
+  background-color: white;
+  height: 64px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 24px;
+}
+.l-header h1 {
+  margin: 0;
+}
+
+.l-header__logo img {
+  width: 183px;
+  height: 24px;
+}
+
+.l-header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.l-header__nav a {
+  font-size: 12px;
+  margin-right: 12px;
 }
