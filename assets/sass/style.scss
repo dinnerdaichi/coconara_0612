@@ -1,0 +1,36 @@
+/*--------------------------------------*
+  * foundation
+*--------------------------------------*/
+@use "./foundation/reset";
+@use "./foundation/variable";
+@use "./foundation/base";
+
+/*--------------------------------------*
+    * layout
+*--------------------------------------*/
+@use "./layout/header";
+@use "./layout/footer";
+
+/*--------------------------------------*
+    * component
+*--------------------------------------*/
+
+// @use "./object/component/button";
+@use "./object/component/inner";
+@use "./object/component/section";
+@use "./object/component/swiper";
+// @use "./object/component/point";
+// @use "./object/component/tel";
+
+/*--------------------------------------*
+    * project
+*--------------------------------------*/
+@use "./object/project/mv";
+@use "./object/project/about";
+@use "./object/project/work";
+@use "./object/project/policy";
+@use "./object/project/skill";
+@use "./object/project/contact";
+@use "./object/project/page-work";
+@use "./object/project/price";
+@use "./object/project/voice";
