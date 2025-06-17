@@ -7,9 +7,17 @@
 /*--------------------------------------*
     * project
 *--------------------------------------*/
-.l-header {
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.header {
   background-color: white;
-  height: 64px;
+  height: 187px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,16 +29,16 @@
           align-items: center;
   padding: 0 24px;
 }
-.l-header h1 {
+.header h1 {
   margin: 0;
 }
 
-.l-header__logo img {
-  width: 183px;
-  height: 24px;
+.header__logo {
+  width: 136px;
+  height: 169px;
 }
 
-.l-header__nav {
+.header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -41,7 +49,44 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.l-header__nav a {
-  font-size: 12px;
-  margin-right: 12px;
+.header__nav a {
+  font-size: 29px;
+  margin-right: 83px;
+  text-align: right;
+}
+
+.header__nav--ja {
+  color: #949494;
+}
+
+.main-visual {
+  padding-inline: 215px;
+  color: #fff;
+  background-color: blue;
+}
+
+.main-visual__title {
+  font-size: 61px;
+}
+
+.main-visual__lead {
+  font-size: 42px;
+}
+
+main {
+  padding-inline: 215px;
+}
+
+.philosophy__title {
+  color: #DCDDDD;
+  font-size: 126px;
+}
+
+.philosophy__title-sub {
+  color: #1B1464;
+  font-size: 39px;
+}
+
+.philosophy__text {
+  font-size: 46px;
 }
