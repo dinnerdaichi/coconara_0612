@@ -1,4 +1,44 @@
-@use "../../foundation/mixin"as m;
+@use "../../foundation/mixin" as m;
+
+@function rclamp($max, $maxViewport, $minSize: null) {
+  $minViewport: 768;
+  $scale: $max / $maxViewport;
+  $autoMin: $scale * $minViewport;
+  $min: if($minSize !=null, $minSize, $autoMin);
+
+  $minRem: $min / 16;
+  $maxRem: $max / 16;
+  $scaleRem: $scale * 100;
+
+  @return clamp(#{$minRem}rem, #{$scaleRem}vw, #{$maxRem}rem);
+}
+
+@function rclamp-negative($value, $valueViewport, $minSize: null) {
+  $value-rem: $value / 16;
+  $start: 1360;
+  $end: 768;
+  $base: 1920;
+
+  $scale: $value / $valueViewport;
+  $ratio: $end / $base;
+  $min: $value * $ratio;
+  $min-rem: $min / 16;
+  $scaleRem: $scale * 100;
+  $slope: (
+    $min-rem - $value-rem) / ($start - $end) * 100;
+  @return clamp(#{$value-rem}rem, #{$scaleRem}vw, #{$min-rem}rem
+);
+}
+
+@function vw-sp($px, $base: 375) {
+
+  $num: if(unitless($px), $px, strip-unit($px));
+  $vw: $num / $base * 100;
+
+  @return #{$vw}vw;
+}
+
+
 
 a {
   text-decoration: none;
@@ -69,14 +109,14 @@ main {
 
 .philosophy__title {
   color: #DCDDDD;
-  font-size: 126px;
+  font-size: rclamp(126, 1920);
 }
 
 .philosophy__title-sub {
   color: #1B1464;
-  font-size: 39px;
+  font-size: rclamp(39, 1920);
 }
 
 .philosophy__text {
-  font-size: 46px;
+  font-size: rclamp(46,1920)
 }

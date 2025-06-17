@@ -79,14 +79,14 @@ main {
 
 .philosophy__title {
   color: #DCDDDD;
-  font-size: 126px;
+  font-size: clamp(3.15rem, 6.5625vw, 7.875rem);
 }
 
 .philosophy__title-sub {
   color: #1B1464;
-  font-size: 39px;
+  font-size: clamp(0.975rem, 2.03125vw, 2.4375rem);
 }
 
 .philosophy__text {
-  font-size: 46px;
+  font-size: clamp(1.15rem, 2.3958333333vw, 2.875rem);
 }
