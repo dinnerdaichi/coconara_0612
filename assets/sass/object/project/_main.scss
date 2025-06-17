@@ -1,4 +1,4 @@
-@use "../../foundation/mixin" as m;
+@use "../../foundation/mixin"as m;
 
 @function rclamp($max, $maxViewport, $minSize: null) {
   $minViewport: 768;
@@ -24,10 +24,8 @@
   $min: $value * $ratio;
   $min-rem: $min / 16;
   $scaleRem: $scale * 100;
-  $slope: (
-    $min-rem - $value-rem) / ($start - $end) * 100;
-  @return clamp(#{$value-rem}rem, #{$scaleRem}vw, #{$min-rem}rem
-);
+  $slope: ($min-rem - $value-rem) / ($start - $end) * 100;
+  @return clamp(#{$value-rem}rem, #{$scaleRem}vw, #{$min-rem}rem);
 }
 
 @function vw-sp($px, $base: 375) {
@@ -38,85 +36,133 @@
   @return #{$vw}vw;
 }
 
-
+// 共通
 
 a {
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-}
+// header
 
 .header {
-  background-color: white;
-  height: 187px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
-
-  h1 {
-    margin: 0;
-  }
-
+  padding: rclamp-negative(30, 1920) rclamp-negative(40, 1920);
 }
 
 .header__logo {
-  width: 136px;
-  height: 169px;
+  width: rclamp-negative(136, 1920);
+  height: rclamp-negative(169, 1920);
 }
 
 .header__nav {
-
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  gap: rclamp-negative(83, 1920);
 
   a {
-    font-size: 29px;
-    margin-right: 83px;
+    font-size: rclamp(29, 1920);
     text-align: right;
   }
 }
-
-.header__nav--en {}
 
 .header__nav--ja {
   color: #949494;
 }
 
-
 // main-visual
 
 .main-visual {
-  padding-inline: 215px;
+  padding: rclamp-negative(300, 1920) rclamp-negative(190, 1920);
   color: #fff;
   background-color: blue;
 }
 
+.main-visual__logo {
+  width: rclamp-negative(283, 1920);
+  height: rclamp-negative(75, 1920);
+}
+
 .main-visual__title {
-  font-size: 61px;
+  margin-top: rclamp-negative(60, 1920);
+  font-size: rclamp(61, 1920);
 }
 
 .main-visual__lead {
-  font-size: 42px;
+  margin-top: rclamp-negative(66, 1920);
+  font-size: rclamp(42, 1920);
 }
 
-main {
-  padding-inline: 215px;
+main {}
+
+// section共通
+
+.section {
+  padding-inline: rclamp(215, 1920);
+  margin-top: rclamp-negative(190, 1920);
 }
 
-.philosophy__title {
-  color: #DCDDDD;
+.section__title {
+  color: #dcdddd;
   font-size: rclamp(126, 1920);
 }
 
-.philosophy__title-sub {
-  color: #1B1464;
+.section__sub-title {
+  padding: rclamp(10, 1920) rclamp(50, 1920);
+  width: fit-content;
+  border: solid 2px #1b1464;
+}
+
+.section__sub-title-text {
+  color: #1b1464;
   font-size: rclamp(39, 1920);
 }
 
-.philosophy__text {
-  font-size: rclamp(46,1920)
+.section__text-box {
+  margin-top: rclamp(56, 1920);
+}
+
+.section__text {
+  color: #1b1464;
+  font-size: rclamp(46, 1920);
+
+  @media screen and (max-width: 768px) {
+    font-size: vw-sp(18);
+  }
+}
+
+// about
+
+.about {
+  margin-top: rclamp(190, 1920);
+  margin-left: auto;
+  padding: rclamp(80, 1920);
+  width: fit-content;
+  background-color: #c7c7c7;
+  border-radius: 100px 0 0 100px;
+}
+
+.about__title {
+  color: #fff;
+  font-size: rclamp(73, 1920);
+}
+
+.about__text-box {
+  margin-top: rclamp(60, 1920);
+}
+
+.about__text {
+  font-size: rclamp(30, 1920);
+}
+
+.about__text+.about__text {
+  margin-top: rclamp(30, 1920);
+}
+
+// service
+
+.service__text {
+  font-size: rclamp(38, 1920);
 }
