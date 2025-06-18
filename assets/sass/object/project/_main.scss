@@ -166,3 +166,47 @@ main {}
 .service__text {
   font-size: rclamp(38, 1920);
 }
+
+
+.service__list {
+  margin-top: rclamp-negative(190, 1920);
+}
+
+.service__item {
+  border: solid 2px #1b1464;
+
+}
+
+.service__item-inner {}
+
+.service__item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: rclamp(55, 1920);
+  font-weight: bold;
+}
+
+.service__item-number {
+  color: #898989;
+  font-size: rclamp(146, 1920);
+}
+
+.service__item-title {
+  position: relative;
+  color: #1B1464;
+  font-size: rclamp(53, 1920);
+  font-weight: bold;
+}
+
+.service__item-title::after {
+  content: "SERVICE";
+  font-size: rclamp(40, 1920);
+  position: absolute;
+  left: 0;
+  top: -45px;
+}
+
+.service__item-text {
+  margin: rclamp(90, 1920);
+  font-size: rclamp(32, 1920);
+}
