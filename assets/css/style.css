@@ -79,6 +79,7 @@ a {
 .section__title {
   color: #dcdddd;
   font-size: clamp(3.15rem, 6.5625vw, 7.875rem);
+  font-weight: bold;
 }
 
 .section__sub-title {
@@ -122,6 +123,7 @@ a {
 .about__title {
   color: #fff;
   font-size: clamp(1.825rem, 3.8020833333vw, 4.5625rem);
+  font-weight: bold;
 }
 
 .about__text-box {
@@ -182,4 +184,46 @@ a {
 .service__item-text {
   margin: clamp(2.25rem, 4.6875vw, 5.625rem);
   font-size: clamp(0.8rem, 1.6666666667vw, 2rem);
+}
+
+.company__inner {
+  background: -webkit-gradient(linear, left top, right top, color-stop(100%, #000048), color-stop(86.48%, #04064D), color-stop(68.07%, #10175C), color-stop(46.86%, #243474), color-stop(23.54%, #405C96), color-stop(0%, #628CBF), color-stop(0%, #5E86BB), color-stop(0%, #4561A3), color-stop(0%, #314390), color-stop(0%, #232E82), color-stop(0%, #1A227A), color-stop(0%, #181E78));
+  background: linear-gradient(90deg, #000048 100%, #04064D 86.48%, #10175C 68.07%, #243474 46.86%, #405C96 23.54%, #628CBF 0%, #5E86BB 0%, #4561A3 0%, #314390 0%, #232E82 0%, #1A227A 0%, #181E78 0%);
+}
+
+/* table01 */
+#table01 {
+  padding: clamp(2.25rem, 4.6875vw, 5.625rem);
+  margin: 0 auto;
+}
+
+#table01 tr {
+  border-bottom: 1px solid #b5b1b1;
+}
+
+#table01 th,
+#table01 td {
+  padding: 24px 0;
+  border: none;
+  font-size: clamp(0.875rem, 1.8229166667vw, 2.1875rem);
+  background-color: #fff;
+}
+
+#table01 th {
+  width: 30%;
+}
+
+/* sp */
+@media only screen and (max-width: 480px) {
+  #table01 th,
+  #table01 td {
+    width: 100%;
+    display: block;
+  }
+  #table01 th {
+    width: 100%;
+  }
+  #table01 td {
+    padding-top: 0;
+  }
 }
