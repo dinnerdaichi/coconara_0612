@@ -350,6 +350,7 @@ main {
   color: #1b1464;
   font-size: rclamp(39, 1920);
   text-align: center;
+  font-weight: bold;
 
   @include m.mq(sp) {
     font-size: vw-sp(16);
