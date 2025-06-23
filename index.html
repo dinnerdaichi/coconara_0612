@@ -17,37 +17,56 @@
 
     <header class="header">
       <h1 class="header__logo">
-        <img src="./assets/image/logo.webp" alt="">
+        <img src="./assets/image/logo.webp" alt="FJACロゴ" width="272" height="338">
       </h1>
       <nav class="header__nav">
-        <a href="">
+        <a href="#philosophy">
           <span class="header__nav--en">Philosophy</span><br>
           <span class="header__nav--ja">企業理念</span>
         </a>
-        <a href="">
+        <a href="#service">
           <span class="header__nav--en">Service</span><br>
           <span class="header__nav--ja">事業内容</span>
         </a>
-        <a href="">
+        <a href="#company">
           <span class="header__nav--en">Company</span><br>
           <span class="header__nav--ja">会社概要</span>
         </a>
       </nav>
+
+      <nav class="menu-right">
+        <ul>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#service">Service</a></li>
+          <li><a href="#company">Company</a></li>
+        </ul>
+      </nav>
+      <!-- ハンバーガーメニュー -->
+      <div id="hamburger">
+        <span></span>
+      </div>
     </header>
 
     <section class="main-visual">
-      <div class="main-visual__logo">
-        <img src="./assets/image/main-visual_logo.webp" alt="">
+      <div class="mv__inner">
+        <div class="bg_mv-deco">
+          <img src="./assets/image/bg_mv-deco.webp" alt="" width="1779" height="3599">
+        </div>
+        <div class="main-visual__logo">
+          <img src="./assets/image/main-visual_logo.webp" alt="Professional" width="570" height="154">
+        </div>
+        <h2 class="main-visual__title">FJAC<br>コンサルティング</h2>
+        <p class="main-visual__lead">
+          税務・会計・経営のプロフェッショナル<br>として、 お客様の未来に寄り添う。
+        </p>
       </div>
-      <h2 class="main-visual__title">FJAC<br>コンサルティング</h2>
-      <p class="main-visual__lead">
-        税務・会計・経営のプロフェッショナル<br>として、 お客様の未来に寄り添う。
-      </p>
     </section>
 
     <main>
-      <section class="philosophy section">
-        <div class="philosophy__inner section__inner">
+
+      <section class="philosophy section" id="philosophy">
+
+        <div class="philosophy__inner section__inner fade-in">
           <h2 class="philosophy__title section__title">PHILOSOPHY</h2>
           <div class="philosophy__sub-title section__sub-title">
             <p class="philosophy__sub-title-text section__sub-title-text">
@@ -64,7 +83,7 @@
         </div>
       </section>
 
-      <section class="about">
+      <section class="about fade-in">
         <div class="about__inner">
           <h2 class="about__title">ABOUT US</h2>
           <div class="about__text-box">
@@ -84,92 +103,177 @@
         </div>
       </section>
 
-      <section class="service section">
+      <section class="service section" id="service">
+
         <div class="service__inner section__inner">
-          <h2 class="service__title section__title">SERVICE</h2>
-          <div class="service__sub-title section__sub-title">
+          <h2 class="service__title section__title fade-in">SERVICE</h2>
+          <div class="service__sub-title section__sub-title fade-in">
             <p class="service__sub-title-text section__sub-title-text">
               事業内容
             </p>
           </div>
-          <div class="service__wrapper">
-            <div class="service__text-box section__text-box">
-              <p class="service__text section__text">
-                当社には、大手監査法人出身の公認会計士や、東証プライム上場企業の財務部門でマネージャーを務めた<br>
-                経験を持つスペシャリストが多数在籍しています。高い専門知識と豊富な実務経験を活かし、複雑かつ高度な経営課題にも対応できる体制を整えています。
-              </p>
+          <div class="service__content fade-in">
+            <div class="service__flex">
+              <div class="service__text">
+                <p>当社には、大手監査法人出身の公認会計士や、東証プライム上場企業の財務部門でマネージャーを務めた<br>経験を持つスペシャリストが多数在籍しています。高い専門知識と豊富な実務経験を活かし、複雑かつ高度な経営課題にも対応できる体制を整えています。</p>
+              </div>
+              <div class="service__img">
+                <img src="./assets/image/service_img.png" alt="01税務顧問財務コンサル記帳代行,02決算報告書の作成,03税務申告書類の作成" width="1647" height="1537">
+              </div>
             </div>
-            <div class="service__content">
 
-            </div>
+          </div>
+
+
+          <ul class="service__list pc">
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <img src="./assets/image/service_box01.png" alt="" width="2965" height="1331">
+                <p>税務顧問では、日々の税務に関する不安や悩みを一つひとつ丁寧に解消し、お客様が安心して事業に専念できる環境を整えます。節税の可能性や税務対応については、単なるアドバイスにとどまらず、実際の実行まで責任を持ってサポートいたします。<br>また、税務調査などの突発的な対応が必要な場面でも、迅速かつ的確なサポートを行い、お客様にとって心強い味方となります。財務コンサルティングでは、会社の経営状況を数字の面から深く分析し、資金繰りや銀行融資、事業計画、事業承継といった具体的な課題に対して、実践的で効果的な提案を行います。</p>
+              </div>
+            </li>
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <img src="./assets/image/service_box02.png" alt="" width="2966" height="1340">
+                <p>税務顧問で記帳代行では、日々の帳簿作成や経理作業をお任せいただくことで、手間を大幅に軽減し、正確で整理されたデータを提供します。<br><br>経営の状況を常に「見える化」し、安心して本業に集中できる環境を整えます。決算報告書の作成では、1年間の経営成績や財務状況を正確にまとめ、金融機関や関係先にも信頼される資料を作成します。わかりやすい説明を心がけ、経営判断に役立つ内容を提供します。</p>
+              </div>
+            </li>
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <img src="./assets/image/service_box03.png" alt="" width="2966" height="1330">
+                <p>各種税務申告書の作成は、事業の正確な状況を反映し、法律に則って適正に行うことが求められます。私たちは法人税、所得税、消費税をはじめとする多様な申告業務において、豊富な知識と経験を活かし、確実で安心できる申告書を作成します。単に書類を作成するだけではなく、お客様の事業内容や状況を丁寧に把握し、最適な方法をご提案します。また、最新の税制や法改正に基づく適切なアドバイスを行い、リスクを未然に防ぐとともに、安心感のある税務対応を心がけています。</p>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="service__list sp">
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <div class="service__item-head">
+                  <p>01</p>
+                  <h3>税務顧問　/　財務コンサル</h3>
+                </div>
+                <p>税務顧問では、日々の税務に関する不安や悩みを一つひとつ丁寧に解消し、お客様が安心して事業に専念できる環境を整えます。節税の可能性や税務対応については、単なるアドバイスにとどまらず、実際の実行まで責任を持ってサポートいたします。<br>また、税務調査などの突発的な対応が必要な場面でも、迅速かつ的確なサポートを行い、お客様にとって心強い味方となります。財務コンサルティングでは、会社の経営状況を数字の面から深く分析し、資金繰りや銀行融資、事業計画、事業承継といった具体的な課題に対して、実践的で効果的な提案を行います。</p>
+              </div>
+            </li>
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <div class="service__item-head">
+                  <p>02</p>
+                  <h3>記帳代行　/　決算報告書の作成</h3>
+                </div>
+                <p>税務顧問で記帳代行では、日々の帳簿作成や経理作業をお任せいただくことで、手間を大幅に軽減し、正確で整理されたデータを提供します。<br><br>経営の状況を常に「見える化」し、安心して本業に集中できる環境を整えます。決算報告書の作成では、1年間の経営成績や財務状況を正確にまとめ、金融機関や関係先にも信頼される資料を作成します。わかりやすい説明を心がけ、経営判断に役立つ内容を提供します。</p>
+              </div>
+            </li>
+            <li class="service__item fade-in">
+              <div class="service__item-inner">
+                <div class="service__item-head">
+                  <p>03</p>
+                  <h3>各種税務申告書の作成</h3>
+                </div>
+                <p>各種税務申告書の作成は、事業の正確な状況を反映し、法律に則って適正に行うことが求められます。私たちは法人税、所得税、消費税をはじめとする多様な申告業務において、豊富な知識と経験を活かし、確実で安心できる申告書を作成します。単に書類を作成するだけではなく、お客様の事業内容や状況を丁寧に把握し、最適な方法をご提案します。また、最新の税制や法改正に基づく適切なアドバイスを行い、リスクを未然に防ぐとともに、安心感のある税務対応を心がけています。</p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+
+      <section class="company" id="company">
+        <div class="company__head-inner">
+          <h2 class="company__title">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 819.377 109.5">
+              <defs>
+                <linearGradient id="linear-gradient" x1="-0.048" y1="0.751" x2="9.214" y2="0.751" gradientUnits="objectBoundingBox">
+                  <stop offset="0" stop-color="#181e78" />
+                  <stop offset="0" stop-color="#1a227a" />
+                  <stop offset="0" stop-color="#232e82" />
+                  <stop offset="0" stop-color="#314390" />
+                  <stop offset="0" stop-color="#4561a3" />
+                  <stop offset="0" stop-color="#5e86bb" />
+                  <stop offset="0" stop-color="#628cbf" />
+                  <stop offset="0.235" stop-color="#405c96" />
+                  <stop offset="0.469" stop-color="#243474" />
+                  <stop offset="0.681" stop-color="#10175c" />
+                  <stop offset="0.865" stop-color="#04064d" />
+                  <stop offset="1" stop-color="#000048" />
+                </linearGradient>
+                <linearGradient id="linear-gradient-2" x1="-1.186" y1="0.751" x2="7.708" y2="0.751" xlink:href="#linear-gradient" />
+                <linearGradient id="linear-gradient-3" x1="-2.147" y1="0.763" x2="5.801" y2="0.763" xlink:href="#linear-gradient" />
+                <linearGradient id="linear-gradient-4" x1="-4.52" y1="0.764" x2="6.145" y2="0.764" xlink:href="#linear-gradient" />
+                <linearGradient id="linear-gradient-5" x1="-4.468" y1="0.763" x2="3.917" y2="0.763" xlink:href="#linear-gradient" />
+                <linearGradient id="linear-gradient-6" x1="-6.442" y1="0.763" x2="3.141" y2="0.763" xlink:href="#linear-gradient" />
+                <linearGradient id="linear-gradient-7" x1="-6.965" y1="0.763" x2="1.777" y2="0.763" xlink:href="#linear-gradient" />
+              </defs>
+              <g id="グループ_14" data-name="グループ 14" transform="translate(-191.537 -7553.837)">
+                <g class="char">
+                  <path data-order="1" id="パス_302" data-name="パス 302" d="M261.975,7592.646c-2.394-11.466-9.072-17.136-19.909-17.136-15.373,0-24.319,12.1-24.319,32.887,0,20.54,9.324,33.015,24.949,33.015,6.93,0,12.853-2.9,16.507-7.939,2.142-3.024,3.024-5.544,3.78-10.836l26.21,3.906c-2.394,10.71-5.167,16.885-10.459,23.059-7.812,8.947-20.035,13.735-35.282,13.735-15.373,0-28.351-4.788-37.3-13.86-9.324-9.452-14.617-24.194-14.617-41.08,0-17.136,5.293-31.627,15.247-41.456,8.7-8.442,21.421-13.1,36.164-13.1,16.255,0,28.982,5.544,37.172,16.507,4.032,5.166,6.174,9.828,7.813,17.262Z" fill="url(#linear-gradient)" />
+                </g>
+                <g class="char">
+                  <path data-order="2" id="パス_303" data-name="パス 303" d="M409.144,7608.02c0,33.265-20.288,55.317-50.908,55.317-30.871,0-50.78-21.548-50.78-54.94,0-33.265,19.909-54.56,50.907-54.56S409.144,7575.006,409.144,7608.02Zm-26.21.251c0-20.413-9.325-32.761-24.571-32.761-15.373,0-24.824,12.474-24.824,32.761,0,20.54,9.451,33.266,24.824,33.266C373.609,7641.537,382.934,7628.937,382.934,7608.271Z" fill="url(#linear-gradient-2)" />
+                </g>
+                <g class="char">
+                  <path data-order="3" id="パス_304" data-name="パス 304" d="M477.053,7660.942c-.63-4.41-2.016-9.072-5.418-18.649l-11.593-33.518c-.126-.629-3.906-12.348-4.284-13.356-1.386-4.536-1.386-4.536-2.016-6.3.756,7.938,1.26,18.271,1.26,24.949v27.344a134.935,134.935,0,0,0,1.008,19.53H431.187a139.619,139.619,0,0,0,1.007-19.53v-65.65a174.073,174.073,0,0,0-1.007-19.658h33.265c.882,5.419,1.891,9.451,4.788,17.767l18.9,54.31,18.775-54.31c2.9-8.441,3.906-12.475,4.662-17.767h33.392a146.15,146.15,0,0,0-1.008,19.658v65.65c0,9.576.252,14.49,1.008,19.53H520.147a137.166,137.166,0,0,0,1.008-19.53v-27.471c0-3.023.378-12.474.63-16.38.379-6.678.379-6.678.505-8.569-2.772,9.829-4.032,14.365-5.671,18.9L504.4,7642.42c-3.15,8.946-4.788,14.49-5.417,18.522Z" fill="url(#linear-gradient-3)" />
+                </g>
+                <g class="char">
+                  <path data-order="4" id="パス_305" data-name="パス 305" d="M570.164,7660.942a135.081,135.081,0,0,0,1.008-18.649v-68.169a140.861,140.861,0,0,0-1.008-18.4c5.922.252,10.459.377,18.524.377h27.594c24.95,0,38.685,11.971,38.685,33.9,0,22.43-14.365,35.787-38.811,35.787H596.247v16.129a163.353,163.353,0,0,0,1.009,19.026Zm44.858-56.577c8.821,0,13.988-4.914,13.988-13.608s-4.915-13.232-13.988-13.232H596.247v26.84Z" fill="url(#linear-gradient-4)" />
+                </g>
+                <g class="char">
+                  <path data-order="5" id="パス_306" data-name="パス 306" d="M747.2,7660.942a102.369,102.369,0,0,0-3.024-13.608l-3.4-10.711H704.857l-3.4,10.711a72.6,72.6,0,0,0-3.149,13.608H668.819c1.891-3.78,3.025-6.8,6.049-15.372l27.217-75.857a76.811,76.811,0,0,0,4.032-13.609h32.889a100.511,100.511,0,0,0,4.284,13.609l27.343,75.857c2.394,6.678,4.411,11.844,6.049,15.372Zm-24.571-83.29-11.719,37.8H734.6Z" fill="url(#linear-gradient-5)" />
+                </g>
+                <g class="char">
+                  <path data-order="6" id="パス_307" data-name="パス 307" d="M855.051,7607.642a169.329,169.329,0,0,1,9.072,15c-.5-5.8-.756-11.593-.756-18.65v-28.729a137.066,137.066,0,0,0-1.008-19.154H889.2a137.066,137.066,0,0,0-1.008,19.154v66.91a154.324,154.324,0,0,0,1.008,18.774H861.6a136.084,136.084,0,0,0-9.452-16l-23.311-35.156a149.168,149.168,0,0,1-9.072-15.5,180.68,180.68,0,0,1,.881,18.775v28.225a137.813,137.813,0,0,0,1.009,19.657h-26.84c.756-4.914,1.008-10.458,1.008-19.783V7574.88a140.638,140.638,0,0,0-1.008-18.776h27.344c1.26,3.4,4.032,8.443,8.946,15.751Z" fill="url(#linear-gradient-6)" />
+                </g>
+                <g class="char">
+                  <path data-order="7" id="パス_308" data-name="パス 308" d="M971.978,7642.293a154.132,154.132,0,0,0,1.007,18.649H945.517a166.762,166.762,0,0,0,1.007-18.649v-23.311l-28.981-47.63c-2.269-3.907-5.041-8.065-10.081-15.248h31.88a60.755,60.755,0,0,0,5.923,13.232l13.986,25.579,13.987-25.454c3.15-5.8,4.914-9.7,5.8-13.357h31.88c-3.654,5.292-8.442,12.475-10.081,15.248l-28.855,47.63Z" fill="url(#linear-gradient-7)" />
+                </g>
+              </g>
+            </svg>
+          </h2>
+        </div>
+        <div class="company__content">
+          <div class="section__inner fade-in">
+            <h3 class="company__sub-title">会社概要</h3>
+            <table id="table01" class="table-wrapper">
+              <tr>
+                <th>社名</th>
+                <td>FJACコンサルティング</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td> 東京都世田谷区船橋6-27-1　アトラスシティ1017</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>平川絵里子</td>
+              </tr>
+              <tr>
+                <th>設立</th>
+                <td>平成27年10月5日</td>
+              </tr>
+              <tr>
+                <th>資本金</th>
+                <td>1,000万</td>
+              </tr>
+            </table>
           </div>
         </div>
-
-        <ul class="service__list">
-          <li class="service__item">
-            <div class="service__item-inner">
-              <div class="service__item-wrapper">
-                <div class="service__item-number">01</div>
-                <h3 class="service__item-title">
-                  税務顧問　/　財務コンサル
-                </h3>
-              </div>
-              <p class="service__item-text">
-                税務顧問では、日々の税務に関する不安や悩みを一つひとつ丁寧に解消し、お客様が安心して事業に専念できる環境を整えます。節税の可能性や税務対応については、単なるアドバイスに
-                とどまらず、実際の実行まで責任を持ってサポートいたします。また、税務調査などの突発的な
-                対応が必要な場面でも、迅速かつ的確なサポートを行い、お客様にとって心強い味方となります。財務コンサルティングでは、会社の経営状況を数字の面から深く分析し、資金繰りや銀行融資、事業計画、事業承継といった具体的な課題に対して、実践的で効果的な提案を行います。
-            </div>
-          </li>
-        </ul>
       </section>
-
-      <section class="company">
-        <h2 class="company__title">COMPANY</h2>
-        <div class="company__inner">
-          <h3 class="company__sub-title">会社概要</h3>
-          <table id="table01">
-            <tr>
-              <th>社名</th>
-              <td>FJACコンサルティング</td>
-            </tr>
-            <tr>
-              <th>住所</th>
-              <td> 東京都世田谷区船橋6-27-1　アトラスシティ1017</td>
-            </tr>
-            <tr>
-              <th>代表者</th>
-              <td>平川絵里子</td>
-            </tr>
-            <tr>
-              <th>設立</th>
-              <td>平成27年10月5日</td>
-            </tr>
-            <tr>
-              <th>資本金</th>
-              <td>1,000万</td>
-            </tr>
-          </table>
-        </div>
-      </section>
-
-
-
-
-
 
     </main>
 
+    <!-- <footer>
 
-
-    <footer>
-
-    </footer>
-
+    </footer> -->
 
   </div>
 
 
+  <!-- GSAP本体 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
+  <!-- ScrollTrigger（スクロールアニメーションする場合） -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="assets/js/script.js"></script>
 
 </body>
