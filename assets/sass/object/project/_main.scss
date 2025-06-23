@@ -1,6 +1,7 @@
 @use "../../foundation/mixin" as m;
 
 @import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap');
 
 @function rclamp($max, $maxViewport, $minSize: null) {
   $minViewport: 768;
@@ -55,6 +56,10 @@ html {
   scroll-behavior: smooth;
 
 
+}
+
+body{
+ font-family: "hiragino-kaku-gothic-pron", sans-serif;
 }
 
 h1,
@@ -114,6 +119,10 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.font-kozuka{
+  font-family: "kozuka-gothic-pro", sans-serif;
 }
 
 // header
@@ -195,8 +204,8 @@ a {
   width: 100%;
   max-width: 1910px;
   margin: 0 auto;
-  padding-inline: rclamp(215, 1920);
-  padding-block: rclamp(300, 1920);
+  padding-inline: rclamp(254, 1920);
+  padding-block: rclamp(326, 1920) rclamp(274, 1920);
 
   @include m.mq(sp) {
     padding-inline: vw-sp(20);
@@ -222,6 +231,7 @@ a {
   font-size: rclamp(61, 1920);
   line-height: calc(86 / 61);
   letter-spacing: 0.075em;
+  font-weight: bold;
 }
 
 .main-visual__lead {
@@ -280,6 +290,11 @@ main {
   margin: 0 auto;
 }
 
+.company .section__inner
+{
+  max-width: 1520px;
+
+}
 .section__title {
   color: #dcdddd;
   font-size: rclamp(126, 1920);
@@ -291,11 +306,25 @@ main {
   }
 }
 
+.section__title.philosophy__title{
+  font-size: rclamp(126, 1920);
+  letter-spacing: 0.12em;
+
+  @include m.mq(sp){
+     font-size: vw-sp(36);
+  }
+}
+
+.section__title.service__title{
+  font-size: rclamp(113, 1920);
+  letter-spacing: 0.12em;
+}
+
 .section__sub-title {
-  padding: rclamp(10, 1920) rclamp(50, 1920);
+  // padding: rclamp(10, 1920) rclamp(50, 1920);
   width: fit-content;
   border: solid 2px #1b1464;
-  margin-top: rclamp-negative(-5, 1920);
+  margin-top: rclamp-negative(-12, 1920);
 
   @include m.mq(sp) {
     border: solid 2px #1b1464;
@@ -303,9 +332,15 @@ main {
   }
 }
 
+.section__sub-title.service__sub-title{
+  width: rclamp(267, 1920);
+
+}
+
 .section__sub-title-text {
   color: #1b1464;
   font-size: rclamp(39, 1920);
+  text-align: center;
 
   @include m.mq(sp) {
     font-size: vw-sp(16);
@@ -314,6 +349,11 @@ main {
 
 .section__text-box {
   margin-top: rclamp(56, 1920);
+}
+
+.philosophy__text-box{
+  margin-top: rclamp(36 ,1920);
+  line-height: 1.7;
 }
 
 .section__text {
@@ -326,7 +366,16 @@ main {
 }
 
 .philosophy {
-  padding-top: rclamp(256, 1920);
+  padding-top: rclamp(246, 1920);
+
+  @include m.mq(sp){
+    padding-top: vw-sp(80);
+  }
+}
+
+.philosophy__sub-title{
+  width: rclamp(268, 1920);
+  padding: 0;
 }
 
 // about
@@ -334,19 +383,20 @@ main {
 
 
 .about {
-  margin-top: rclamp(190, 1920);
+  margin-top: rclamp(220, 1920);
   margin-left: auto;
   // padding: rclamp(80, 1920);
-  width: 80%;
+  width: 81.5%;
   background-color: #c7c7c7;
   border-radius: 300px 0 0 300px;
   padding-left: rclamp(224, 1920);
-  padding-block: rclamp(130, 1920) rclamp(80, 1920);
+  padding-block: rclamp(124, 1920) rclamp(156, 1920);
   opacity: 0.9;
 
   @include m.mq(sp) {
     border-radius: 150px 0 0 150px;
     width: 85%;
+    margin-top: vw-sp(60);
 
   }
 }
@@ -355,7 +405,7 @@ main {
   color: #fff;
   font-size: rclamp(73, 1920);
   font-weight: bold;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.12em;
 
   @include m.mq(sp) {
     font-size: vw-sp(30);
@@ -363,7 +413,7 @@ main {
 }
 
 .about__text-box {
-  margin-top: rclamp(60, 1920);
+  margin-top: rclamp(56, 1920);
 }
 
 .about__text {
@@ -376,20 +426,21 @@ main {
 }
 
 .about__text+.about__text {
-  margin-top: rclamp(30, 1920);
+  margin-top: rclamp(54, 1920);
 }
 
 // service
 
 .service {
-  padding-bottom: clamp(7.5rem, 15.625vw, 18.75rem);
+  padding-bottom: rclamp(535 ,1920);
   position: relative;
   background: url(../../assets/image/bg_deco02.webp) no-repeat 20% calc(100% - rclamp-negative(-236, 1920))/cover;
   background-size: 137% 100%;
-  margin-top: rclamp(380, 1920);
+  margin-top: rclamp(370, 1920);
 
   @include m.mq(sp) {
     margin-top: vw-sp(80);
+    padding-bottom: 150px;
   }
 
 }
@@ -403,7 +454,7 @@ main {
 
 .service__flex {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   @include m.mq(sp) {
@@ -414,33 +465,39 @@ main {
 .service__text {
   font-size: rclamp(38, 1920);
   color: var(--color-blue);
-  width: 40%;
+  width: 50%;
   line-height: calc(69 / 38);
-  margin-right: rclamp(140, 1920);
+  margin-right: rclamp(120, 1920);
+  max-width: rclamp(610 ,1920);
 
   @include m.mq(sp) {
     width: 100%;
     margin-right: 0;
+    max-width: 100%;
   }
 }
 
 .service__content {
-  margin-top: rclamp(50, 1920);
+  margin-top: rclamp(42 ,1920);
 }
 
 .service__img {
   width: 60%;
-  margin-top: rclamp-negative(-30, 1920, );
+  margin-top: rclamp-negative(-140, 1920, );
+  max-width: rclamp(824 ,1920);
+  margin-right: rclamp-negative(-90,1920 );
 
   @include m.mq(sp) {
     width: 80%;
     margin-top: vw-sp(50);
+    max-width: 100%;
+    margin-right: 0;
   }
 }
 
 
 .service__list {
-  margin-top: rclamp-negative(190, 1920);
+  margin-top: rclamp-negative(390, 1920);
 
   @include m.mq(sp) {
     margin-top: vw-sp(60);
@@ -451,6 +508,10 @@ main {
   // border: solid 2px #1b1464;
   position: relative;
   margin-top: rclamp(300, 1920);
+
+  &:first-child {
+    margin-top: 0;
+  }
 
   @include m.mq(sp) {
     margin-top: vw-sp(40);
@@ -477,10 +538,10 @@ main {
     width: 90%;
     font-size: rclamp(30, 1920);
     position: absolute;
-    top: 57%;
+    top: 64%;
     left: 50%;
     transform: translate(-50%, -50%);
-    line-height: 2;
+    line-height: 1.8;
 
     @include m.mq(sp) {
       position: relative;
@@ -491,6 +552,17 @@ main {
       font-size: vw-sp(12);
 
     }
+  }
+}
+
+.service__item-inner.second{
+  p{
+    top: 58%;
+  }
+}
+.service__item-inner.third{
+  p{
+    top: 53%;
   }
 }
 
@@ -576,7 +648,7 @@ main {
   width: 100%;
   max-width: 1910px;
   margin: 0 auto -0.2%;
-  padding-inline: rclamp(215, 1920);
+  padding-inline: rclamp(190, 1920);
 
   @include m.mq(sp) {
     padding-inline: 0;
@@ -636,7 +708,7 @@ main {
 #table01 {
   padding: rclamp(90, 1920);
   width: 100%;
-  margin-top: rclamp(150, 1920);
+  margin-top: rclamp(120, 1920);
   background: white;
   border-radius: 50px;
 
@@ -646,7 +718,7 @@ main {
 }
 
 #table01 tr {
-  border-bottom: 1px solid #b5b1b1;
+  border-bottom: 1px solid #1A4874;
 
   &:last-child {
     border-bottom: none;
@@ -656,7 +728,7 @@ main {
 
 #table01 th,
 #table01 td {
-  padding: rclamp(40, 1920) 0;
+  padding: rclamp(60, 1920) 0;
   border: none;
   font-size: rclamp(35, 1920);
   background-color: #fff;
@@ -670,12 +742,12 @@ main {
 
 
 #table01 th {
-  width: 30%;
+  width: 28%;
   color: #666666;
 }
 
 tbody {
-  padding: rclamp(150, 1920);
+  padding: rclamp(116, 1920) rclamp(184 ,1920) rclamp(50 ,1920);
   display: block;
 
   @include m.mq(sp) {

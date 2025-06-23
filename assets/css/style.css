@@ -9,6 +9,7 @@
     * project
 *--------------------------------------*/
 @import url("https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap");
 :root {
   --color-blue: #1b1464;
   --color-: #;
@@ -23,6 +24,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "hiragino-kaku-gothic-pron", sans-serif;
 }
 
 h1,
@@ -76,6 +81,10 @@ img {
 }
 a {
   text-decoration: none;
+}
+
+.font-kozuka {
+  font-family: "kozuka-gothic-pro", sans-serif;
 }
 
 .header {
@@ -168,8 +177,8 @@ a {
   width: 100%;
   max-width: 1910px;
   margin: 0 auto;
-  padding-inline: clamp(5.375rem, 11.1979166667vw, 13.4375rem);
-  padding-block: clamp(7.5rem, 15.625vw, 18.75rem);
+  padding-inline: clamp(6.35rem, 13.2291666667vw, 15.875rem);
+  padding-block: clamp(8.15rem, 16.9791666667vw, 20.375rem) clamp(6.85rem, 14.2708333333vw, 17.125rem);
 }
 @media screen and (max-width:767px) {
   .mv__inner {
@@ -195,6 +204,7 @@ a {
   font-size: clamp(1.525rem, 3.1770833333vw, 3.8125rem);
   line-height: 1.4098360656;
   letter-spacing: 0.075em;
+  font-weight: bold;
 }
 
 .main-visual__lead {
@@ -247,6 +257,10 @@ main {
   margin: 0 auto;
 }
 
+.company .section__inner {
+  max-width: 1520px;
+}
+
 .section__title {
   color: #dcdddd;
   font-size: clamp(3.15rem, 6.5625vw, 7.875rem);
@@ -259,13 +273,27 @@ main {
   }
 }
 
+.section__title.philosophy__title {
+  font-size: clamp(3.15rem, 6.5625vw, 7.875rem);
+  letter-spacing: 0.12em;
+}
+@media screen and (max-width:767px) {
+  .section__title.philosophy__title {
+    font-size: 9.6vw;
+  }
+}
+
+.section__title.service__title {
+  font-size: clamp(2.825rem, 5.8854166667vw, 7.0625rem);
+  letter-spacing: 0.12em;
+}
+
 .section__sub-title {
-  padding: clamp(0.25rem, 0.5208333333vw, 0.625rem) clamp(1.25rem, 2.6041666667vw, 3.125rem);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border: solid 2px #1b1464;
-  margin-top: clamp(-0.3125rem, -0.2604166667vw, -0.125rem);
+  margin-top: clamp(-0.75rem, -0.625vw, -0.3rem);
 }
 @media screen and (max-width:767px) {
   .section__sub-title {
@@ -273,9 +301,14 @@ main {
   }
 }
 
+.section__sub-title.service__sub-title {
+  width: clamp(6.675rem, 13.90625vw, 16.6875rem);
+}
+
 .section__sub-title-text {
   color: #1b1464;
   font-size: clamp(0.975rem, 2.03125vw, 2.4375rem);
+  text-align: center;
 }
 @media screen and (max-width:767px) {
   .section__sub-title-text {
@@ -285,6 +318,11 @@ main {
 
 .section__text-box {
   margin-top: clamp(1.4rem, 2.9166666667vw, 3.5rem);
+}
+
+.philosophy__text-box {
+  margin-top: clamp(0.9rem, 1.875vw, 2.25rem);
+  line-height: 1.7;
 }
 
 .section__text {
@@ -298,23 +336,34 @@ main {
 }
 
 .philosophy {
-  padding-top: clamp(6.4rem, 13.3333333333vw, 16rem);
+  padding-top: clamp(6.15rem, 12.8125vw, 15.375rem);
+}
+@media screen and (max-width:767px) {
+  .philosophy {
+    padding-top: 21.3333333333vw;
+  }
+}
+
+.philosophy__sub-title {
+  width: clamp(6.7rem, 13.9583333333vw, 16.75rem);
+  padding: 0;
 }
 
 .about {
-  margin-top: clamp(4.75rem, 9.8958333333vw, 11.875rem);
+  margin-top: clamp(5.5rem, 11.4583333333vw, 13.75rem);
   margin-left: auto;
-  width: 80%;
+  width: 81.5%;
   background-color: #c7c7c7;
   border-radius: 300px 0 0 300px;
   padding-left: clamp(5.6rem, 11.6666666667vw, 14rem);
-  padding-block: clamp(3.25rem, 6.7708333333vw, 8.125rem) clamp(2rem, 4.1666666667vw, 5rem);
+  padding-block: clamp(3.1rem, 6.4583333333vw, 7.75rem) clamp(3.9rem, 8.125vw, 9.75rem);
   opacity: 0.9;
 }
 @media screen and (max-width:767px) {
   .about {
     border-radius: 150px 0 0 150px;
     width: 85%;
+    margin-top: 16vw;
   }
 }
 
@@ -322,7 +371,7 @@ main {
   color: #fff;
   font-size: clamp(1.825rem, 3.8020833333vw, 4.5625rem);
   font-weight: bold;
-  letter-spacing: 0.075em;
+  letter-spacing: 0.12em;
 }
 @media screen and (max-width:767px) {
   .about__title {
@@ -331,7 +380,7 @@ main {
 }
 
 .about__text-box {
-  margin-top: clamp(1.5rem, 3.125vw, 3.75rem);
+  margin-top: clamp(1.4rem, 2.9166666667vw, 3.5rem);
 }
 
 .about__text {
@@ -345,19 +394,20 @@ main {
 }
 
 .about__text + .about__text {
-  margin-top: clamp(0.75rem, 1.5625vw, 1.875rem);
+  margin-top: clamp(1.35rem, 2.8125vw, 3.375rem);
 }
 
 .service {
-  padding-bottom: clamp(7.5rem, 15.625vw, 18.75rem);
+  padding-bottom: clamp(13.375rem, 27.8645833333vw, 33.4375rem);
   position: relative;
   background: url(../../assets/image/bg_deco02.webp) no-repeat 20% calc(100% - clamp(-14.75rem, -12.2916666667vw, -5.9rem))/cover;
   background-size: 137% 100%;
-  margin-top: clamp(9.5rem, 19.7916666667vw, 23.75rem);
+  margin-top: clamp(9.25rem, 19.2708333333vw, 23.125rem);
 }
 @media screen and (max-width:767px) {
   .service {
     margin-top: 21.3333333333vw;
+    padding-bottom: 150px;
   }
 }
 
@@ -370,9 +420,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -389,34 +439,40 @@ main {
 .service__text {
   font-size: clamp(0.95rem, 1.9791666667vw, 2.375rem);
   color: var(--color-blue);
-  width: 40%;
+  width: 50%;
   line-height: 1.8157894737;
-  margin-right: clamp(3.5rem, 7.2916666667vw, 8.75rem);
+  margin-right: clamp(3rem, 6.25vw, 7.5rem);
+  max-width: clamp(15.25rem, 31.7708333333vw, 38.125rem);
 }
 @media screen and (max-width:767px) {
   .service__text {
     width: 100%;
     margin-right: 0;
+    max-width: 100%;
   }
 }
 
 .service__content {
-  margin-top: clamp(1.25rem, 2.6041666667vw, 3.125rem);
+  margin-top: clamp(1.05rem, 2.1875vw, 2.625rem);
 }
 
 .service__img {
   width: 60%;
-  margin-top: clamp(-1.875rem, -1.5625vw, -0.75rem);
+  margin-top: clamp(-8.75rem, -7.2916666667vw, -3.5rem);
+  max-width: clamp(20.6rem, 42.9166666667vw, 51.5rem);
+  margin-right: clamp(-5.625rem, -4.6875vw, -2.25rem);
 }
 @media screen and (max-width:767px) {
   .service__img {
     width: 80%;
     margin-top: 13.3333333333vw;
+    max-width: 100%;
+    margin-right: 0;
   }
 }
 
 .service__list {
-  margin-top: clamp(11.875rem, 9.8958333333vw, 4.75rem);
+  margin-top: clamp(24.375rem, 20.3125vw, 9.75rem);
 }
 @media screen and (max-width:767px) {
   .service__list {
@@ -427,6 +483,9 @@ main {
 .service__item {
   position: relative;
   margin-top: clamp(7.5rem, 15.625vw, 18.75rem);
+}
+.service__item:first-child {
+  margin-top: 0;
 }
 @media screen and (max-width:767px) {
   .service__item {
@@ -451,11 +510,11 @@ main {
   width: 90%;
   font-size: clamp(0.75rem, 1.5625vw, 1.875rem);
   position: absolute;
-  top: 57%;
+  top: 64%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  line-height: 2;
+  line-height: 1.8;
 }
 @media screen and (max-width:767px) {
   .service__item-inner p {
@@ -467,6 +526,14 @@ main {
     width: inherit;
     font-size: 3.2vw;
   }
+}
+
+.service__item-inner.second p {
+  top: 58%;
+}
+
+.service__item-inner.third p {
+  top: 53%;
 }
 
 .service__item-head {
@@ -554,7 +621,7 @@ main {
   width: 100%;
   max-width: 1910px;
   margin: 0 auto -0.2%;
-  padding-inline: clamp(5.375rem, 11.1979166667vw, 13.4375rem);
+  padding-inline: clamp(4.75rem, 9.8958333333vw, 11.875rem);
 }
 @media screen and (max-width:767px) {
   .company__head-inner {
@@ -604,7 +671,7 @@ main {
 #table01 {
   padding: clamp(2.25rem, 4.6875vw, 5.625rem);
   width: 100%;
-  margin-top: clamp(3.75rem, 7.8125vw, 9.375rem);
+  margin-top: clamp(3rem, 6.25vw, 7.5rem);
   background: white;
   border-radius: 50px;
 }
@@ -615,7 +682,7 @@ main {
 }
 
 #table01 tr {
-  border-bottom: 1px solid #b5b1b1;
+  border-bottom: 1px solid #1A4874;
 }
 #table01 tr:last-child {
   border-bottom: none;
@@ -623,7 +690,7 @@ main {
 
 #table01 th,
 #table01 td {
-  padding: clamp(1rem, 2.0833333333vw, 2.5rem) 0;
+  padding: clamp(1.5rem, 3.125vw, 3.75rem) 0;
   border: none;
   font-size: clamp(0.875rem, 1.8229166667vw, 2.1875rem);
   background-color: #fff;
@@ -638,12 +705,12 @@ main {
 }
 
 #table01 th {
-  width: 30%;
+  width: 28%;
   color: #666666;
 }
 
 tbody {
-  padding: clamp(3.75rem, 7.8125vw, 9.375rem);
+  padding: clamp(2.9rem, 6.0416666667vw, 7.25rem) clamp(4.6rem, 9.5833333333vw, 11.5rem) clamp(1.25rem, 2.6041666667vw, 3.125rem);
   display: block;
 }
 @media screen and (max-width:767px) {

@@ -6,8 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 
+  <script>
+  (function(d) {
+    var config = {
+      kitId: 'xtw0ivn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'xtw0ivn',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+
 </head>
 
 
@@ -56,7 +79,7 @@
           <img src="./assets/image/main-visual_logo.webp" alt="Professional" width="570" height="154">
         </div>
         <h2 class="main-visual__title">FJAC<br>コンサルティング</h2>
-        <p class="main-visual__lead">
+        <p class="main-visual__lead font-kozuka">
           税務・会計・経営のプロフェッショナル<br>として、 お客様の未来に寄り添う。
         </p>
       </div>
@@ -69,12 +92,12 @@
         <div class="philosophy__inner section__inner fade-in">
           <h2 class="philosophy__title section__title">PHILOSOPHY</h2>
           <div class="philosophy__sub-title section__sub-title">
-            <p class="philosophy__sub-title-text section__sub-title-text">
+            <p class="philosophy__sub-title-text section__sub-title-text font-kozuka">
               企業理念
             </p>
           </div>
           <div class="philosophy__text-box section__text-box">
-            <p class="philosophy__text section__text">
+            <p class="philosophy__text section__text font-kozuka">
               会計・税務を通じて<br>
               実績と信頼のプロフェッショナルが、<br>
               あなたの経営を全面的に支えます。
@@ -87,7 +110,7 @@
         <div class="about__inner">
           <h2 class="about__title">ABOUT US</h2>
           <div class="about__text-box">
-            <p class="about__text">
+            <p class="about__text font-kozuka">
               私たちは、中小企業・個人事業主の皆さまを税務・会計を軸に総合的に支える<br>
               パートナーです。お客様にとって最良の選択を導き、共に成長していくことが<br>
               私たちの使命です。<br>
@@ -108,14 +131,14 @@
         <div class="service__inner section__inner">
           <h2 class="service__title section__title fade-in">SERVICE</h2>
           <div class="service__sub-title section__sub-title fade-in">
-            <p class="service__sub-title-text section__sub-title-text">
+            <p class="service__sub-title-text section__sub-title-text font-kozuka">
               事業内容
             </p>
           </div>
           <div class="service__content fade-in">
             <div class="service__flex">
-              <div class="service__text">
-                <p>当社には、大手監査法人出身の公認会計士や、東証プライム上場企業の財務部門でマネージャーを務めた<br>経験を持つスペシャリストが多数在籍しています。高い専門知識と豊富な実務経験を活かし、複雑かつ高度な経営課題にも対応できる体制を整えています。</p>
+              <div class="service__text font-kozuka">
+                <p>当社には、大手監査法人出身の公認会計士や、東証プライム上場企業の財務部門でマネージャーを務めた経験を持つスペシャリストが多数在籍しています。高い専門知識と豊富な実務経験を活かし、複雑かつ高度な経営課題にも対応できる体制を整えています。</p>
               </div>
               <div class="service__img">
                 <img src="./assets/image/service_img.webp" alt="01税務顧問財務コンサル記帳代行,02決算報告書の作成,03税務申告書類の作成" width="1647" height="1537">
@@ -133,13 +156,13 @@
               </div>
             </li>
             <li class="service__item fade-in">
-              <div class="service__item-inner">
+              <div class="service__item-inner second">
                 <img src="./assets/image/service_box02.webp" alt="" width="2966" height="1340">
                 <p>税務顧問で記帳代行では、日々の帳簿作成や経理作業をお任せいただくことで、手間を大幅に軽減し、正確で整理されたデータを提供します。<br><br>経営の状況を常に「見える化」し、安心して本業に集中できる環境を整えます。決算報告書の作成では、1年間の経営成績や財務状況を正確にまとめ、金融機関や関係先にも信頼される資料を作成します。わかりやすい説明を心がけ、経営判断に役立つ内容を提供します。</p>
               </div>
             </li>
             <li class="service__item fade-in">
-              <div class="service__item-inner">
+              <div class="service__item-inner third">
                 <img src="./assets/image/service_box03.webp" alt="" width="2966" height="1330">
                 <p>各種税務申告書の作成は、事業の正確な状況を反映し、法律に則って適正に行うことが求められます。私たちは法人税、所得税、消費税をはじめとする多様な申告業務において、豊富な知識と経験を活かし、確実で安心できる申告書を作成します。単に書類を作成するだけではなく、お客様の事業内容や状況を丁寧に把握し、最適な方法をご提案します。また、最新の税制や法改正に基づく適切なアドバイスを行い、リスクを未然に防ぐとともに、安心感のある税務対応を心がけています。</p>
               </div>
