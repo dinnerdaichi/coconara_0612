@@ -287,6 +287,11 @@ main {
   font-size: clamp(2.825rem, 5.8854166667vw, 7.0625rem);
   letter-spacing: 0.12em;
 }
+@media screen and (max-width:767px) {
+  .section__title.service__title {
+    font-size: 9.6vw;
+  }
+}
 
 .section__sub-title {
   width: -webkit-fit-content;
@@ -298,11 +303,17 @@ main {
 @media screen and (max-width:767px) {
   .section__sub-title {
     border: solid 2px #1b1464;
+    margin-top: -0.5333333333vw;
   }
 }
 
 .section__sub-title.service__sub-title {
   width: clamp(6.675rem, 13.90625vw, 16.6875rem);
+}
+@media screen and (max-width:767px) {
+  .section__sub-title.service__sub-title {
+    width: 26.6666666667vw;
+  }
 }
 
 .section__sub-title-text {
@@ -347,6 +358,11 @@ main {
 .philosophy__sub-title {
   width: clamp(6.7rem, 13.9583333333vw, 16.75rem);
   padding: 0;
+}
+@media screen and (max-width:767px) {
+  .philosophy__sub-title {
+    width: 26.6666666667vw;
+  }
 }
 
 .about {
@@ -472,7 +488,7 @@ main {
 }
 
 .service__list {
-  margin-top: clamp(24.375rem, 20.3125vw, 9.75rem);
+  margin-top: clamp(9.75rem, 20.3125vw, 24.375rem);
 }
 @media screen and (max-width:767px) {
   .service__list {

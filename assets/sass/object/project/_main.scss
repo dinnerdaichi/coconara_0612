@@ -318,6 +318,10 @@ main {
 .section__title.service__title{
   font-size: rclamp(113, 1920);
   letter-spacing: 0.12em;
+
+  @include m.mq(sp){
+    font-size: vw-sp(36);
+  }
 }
 
 .section__sub-title {
@@ -328,12 +332,17 @@ main {
 
   @include m.mq(sp) {
     border: solid 2px #1b1464;
+    margin-top: vw-sp(-2);
 
   }
 }
 
 .section__sub-title.service__sub-title{
   width: rclamp(267, 1920);
+
+  @include m.mq(sp){
+    width: vw-sp(100);
+  }
 
 }
 
@@ -376,6 +385,10 @@ main {
 .philosophy__sub-title{
   width: rclamp(268, 1920);
   padding: 0;
+
+  @include m.mq(sp){
+     width: vw-sp(100);
+  }
 }
 
 // about
@@ -497,7 +510,7 @@ main {
 
 
 .service__list {
-  margin-top: rclamp-negative(390, 1920);
+  margin-top: rclamp(390, 1920);
 
   @include m.mq(sp) {
     margin-top: vw-sp(60);
